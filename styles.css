@@ -12,6 +12,7 @@
     --grey-bg: #6b7280;
     --black-bg: #000000;
     --black-border: #000000;
+    --gray-border: #374151;
     --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --primary-color: #667eea;
     --success-color: #10b981;
@@ -183,6 +184,67 @@ body {
     background: var(--bright-white);
     border-radius: 3px;
     transition: all var(--transition-fast);
+}
+
+/* DROPDOWN MENUS */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-toggle i {
+    font-size: 0.7rem;
+    transition: transform var(--transition-fast);
+}
+
+.nav-item-dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: var(--grey-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl);
+    padding: 0.5rem 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition-fast);
+    z-index: 1001;
+    border: 2px solid var(--gray-border);
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--bright-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.dropdown-link:hover {
+    color: var(--bright-red);
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 1.3rem;
 }
 
 /* HERO SECTION */
@@ -579,6 +641,40 @@ section {
     
     .nav-menu.active { left: 0; }
     .nav-toggle { display: flex; }
+    
+    /* Mobile Dropdown Styles */
+    .nav-item-dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding-left: 1.5rem;
+        margin-top: 0.25rem;
+        min-width: auto;
+    }
+    
+    .dropdown-link {
+        padding: 0.5rem 0;
+        color: var(--text-secondary);
+    }
+    
+    .dropdown-link:hover {
+        background: transparent;
+        padding-left: 0;
+        color: var(--bright-red);
+    }
     
     .affiliates-benefits,
     .detail-content {
