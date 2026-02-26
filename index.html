@@ -69,12 +69,47 @@
                 <p class="section-subtitle">A blueprint for Human and AI collaborative prosperity – building an economy where everyone shares in the benefits</p>
             </div>
 
+            <!-- Custom Video Player #1 -->
             <div class="video-container">
-                <div class="video-placeholder">
-                    <video width="100%" height="100%" controls>
+                <div class="apc-player" id="apcPlayer1">
+                    <div class="apc-seek-flash left"  id="flashLeft1"><i class="fas fa-backward"></i></div>
+                    <div class="apc-seek-flash right" id="flashRight1"><i class="fas fa-forward"></i></div>
+                    <div class="apc-spinner" id="apcSpinner1"><div class="apc-spinner-ring"></div></div>
+                    <video id="apcVideo1">
                         <source src="./videos/video-two.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <div class="apc-play-overlay" id="apcOverlay1">
+                        <div class="apc-big-play"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="apc-controls" id="apcControls1">
+                        <div class="apc-progress-wrap" id="apcSeek1">
+                            <div class="apc-progress-bg">
+                                <div class="apc-buffered" id="apcBuffered1"></div>
+                                <div class="apc-played"   id="apcPlayed1"></div>
+                            </div>
+                            <div class="apc-progress-thumb" id="apcThumb1"></div>
+                        </div>
+                        <div class="apc-bottom">
+                            <button class="apc-btn" id="apcPlayBtn1"><i class="fas fa-play" id="apcPlayIcon1"></i></button>
+                            <div class="apc-volume-group">
+                                <button class="apc-btn" id="apcMuteBtn1"><i class="fas fa-volume-high" id="apcVolIcon1"></i></button>
+                                <input type="range" class="apc-volume-slider" id="apcVol1" min="0" max="1" step="0.02" value="1">
+                            </div>
+                            <div class="apc-time"><span id="apcCur1">0:00</span> / <span id="apcDur1">0:00</span></div>
+                            <div class="apc-spacer"></div>
+                            <button class="apc-speed" id="apcSpeedBtn1">1×</button>
+                            <div class="apc-speed-menu" id="apcSpeedMenu1">
+                                <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
+                                <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
+                                <div class="apc-speed-opt active" data-speed="1">1×</div>
+                                <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
+                                <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
+                                <div class="apc-speed-opt" data-speed="2">2×</div>
+                            </div>
+                            <button class="apc-btn" id="apcFsBtn1"><i class="fas fa-expand" id="apcFsIcon1"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,12 +160,47 @@
                 <p class="section-subtitle">Watch how AI and human collaboration is reshaping the future of our economy</p>
             </div>
 
+            <!-- Custom Video Player #2 -->
             <div class="video-container">
-                <div class="video-placeholder">
-                    <video width="100%" height="100%" controls>
+                <div class="apc-player" id="apcPlayer2">
+                    <div class="apc-seek-flash left"  id="flashLeft2"><i class="fas fa-backward"></i></div>
+                    <div class="apc-seek-flash right" id="flashRight2"><i class="fas fa-forward"></i></div>
+                    <div class="apc-spinner" id="apcSpinner2"><div class="apc-spinner-ring"></div></div>
+                    <video id="apcVideo2">
                         <source src="./videos/video-two.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <div class="apc-play-overlay" id="apcOverlay2">
+                        <div class="apc-big-play"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="apc-controls" id="apcControls2">
+                        <div class="apc-progress-wrap" id="apcSeek2">
+                            <div class="apc-progress-bg">
+                                <div class="apc-buffered" id="apcBuffered2"></div>
+                                <div class="apc-played"   id="apcPlayed2"></div>
+                            </div>
+                            <div class="apc-progress-thumb" id="apcThumb2"></div>
+                        </div>
+                        <div class="apc-bottom">
+                            <button class="apc-btn" id="apcPlayBtn2"><i class="fas fa-play" id="apcPlayIcon2"></i></button>
+                            <div class="apc-volume-group">
+                                <button class="apc-btn" id="apcMuteBtn2"><i class="fas fa-volume-high" id="apcVolIcon2"></i></button>
+                                <input type="range" class="apc-volume-slider" id="apcVol2" min="0" max="1" step="0.02" value="1">
+                            </div>
+                            <div class="apc-time"><span id="apcCur2">0:00</span> / <span id="apcDur2">0:00</span></div>
+                            <div class="apc-spacer"></div>
+                            <button class="apc-speed" id="apcSpeedBtn2">1×</button>
+                            <div class="apc-speed-menu" id="apcSpeedMenu2">
+                                <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
+                                <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
+                                <div class="apc-speed-opt active" data-speed="1">1×</div>
+                                <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
+                                <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
+                                <div class="apc-speed-opt" data-speed="2">2×</div>
+                            </div>
+                            <button class="apc-btn" id="apcFsBtn2"><i class="fas fa-expand" id="apcFsIcon2"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
