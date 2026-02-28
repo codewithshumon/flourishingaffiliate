@@ -1004,3 +1004,13 @@ section {
     .apc-time          { font-size: 0.7rem; }
     .apc-big-play      { width: 60px; height: 60px; font-size: 1.4rem; }
 }
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #ff0000, #667eea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    display: inline-block;
+}
