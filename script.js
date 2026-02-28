@@ -49,6 +49,103 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+
+// Add animate-on-scroll class to elements
+document.addEventListener('DOMContentLoaded', () => {
+    // Add animation classes to sections
+    const sections = document.querySelectorAll('.section-header, .video-container, .affiliates-benefits, .cta-section, .bottom-card');
+    sections.forEach((section, index) => {
+        section.classList.add('animate-on-scroll');
+        section.style.transitionDelay = `${index * 0.1}s`;
+    });
+    
+    // Add animation to benefit cards with staggered delays
+    const benefitCards = document.querySelectorAll('.benefit-card');
+    benefitCards.forEach((card, index) => {
+        card.classList.add('animate-on-scroll');
+        card.style.transitionDelay = `${0.1 + index * 0.15}s`;
+    });
+});
+
+// Scroll animation observer
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all animate-on-scroll elements
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    }, 100);
+});
+
+// Add floating particles to hero
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const particlesContainer = document.createElement('div');
+        particlesContainer.className = 'hero-particles';
+        
+        for (let i = 0; i < 10; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+            particlesContainer.appendChild(particle);
+        }
+        
+        hero.appendChild(particlesContainer);
+    }
+});
+
+// Smooth reveal animation on page load
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+});
+
+// Parallax effect on scroll (subtle)
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero && scrolled < window.innerHeight) {
+        hero.style.backgroundPositionY = `${scrolled * 0.3}px`;
+    }
+});
+
+// Scroll indicator click to scroll down
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            const offsetTop = aboutSection.offsetTop - 80;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+    });
+}
+
 
 function initialisePlayer(suffix) {
 
