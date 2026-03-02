@@ -1073,9 +1073,8 @@ section {
 }
 
 .hero-content {
-    max-width: 1900px;
-    width: 95%;
-    height: 470px;
+    width: 1000px;
+    height: 480px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -1085,7 +1084,7 @@ section {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
@@ -1107,7 +1106,7 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--bright-white);
     margin-bottom: var(--spacing-lg);
     font-weight: 600;
