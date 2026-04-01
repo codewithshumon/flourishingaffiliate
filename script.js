@@ -370,3 +370,4 @@ function initialisePlayer(suffix) {
 // Initialise both player instances
 initialisePlayer('1');
 initialisePlayer('2');
+initialisePlayer('3');

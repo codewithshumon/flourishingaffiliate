@@ -314,7 +314,7 @@ body {
 
 /* SECTIONS */
 section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
     scroll-margin-top: 80px;
 }
 
@@ -390,7 +390,7 @@ section {
 
 .affiliates-header {
     text-align: center;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .affiliates-benefits {
@@ -1294,7 +1294,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .benefit-card {
@@ -1535,6 +1535,19 @@ section {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
+
+.padding-top-md {
+    padding-top: 100px;
+}
+
+.padding-bottom-sm {
+    padding-bottom: 40px;
+}
+
+
+.margin-top-md {
+    margin-top: 100px;
+}
 /* Responsive Enhancements */
 @media (max-width: 768px) {
     .hero {

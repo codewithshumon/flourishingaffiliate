@@ -1,223 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Powered Community - Building a Flourishing Economy Together</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=6">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AI Powered Community - Building a Flourishing Economy Together
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css?v=7" />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="logo-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-main">AI Powered</span>
-                    <span class="logo-sub">Community</span>
-                </div>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#" class="nav-link btn-members">Visit Community</a></li>
-            </ul>
+      <div class="container">
+        <div class="nav-brand">
+          <div class="logo-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main">AI Powered</span>
+            <span class="logo-sub">Community</span>
+          </div>
         </div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#" class="nav-link btn-members">Visit Community</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">AI Powered Community</h1>
-                <p class="hero-subtitle">The revolutionary solution to economic inequality in the age of AI</p>
-                <p class="hero-description">Don't get left behind – join the community that's building a new economy where everyone wins, not just the wealthy few.</p>
-                
-                <!-- Scroll Down Indicator -->
-                <div class="scroll-indicator">
-                    <span>Scroll Down</span>
-                    <div class="mouse">
-                        <div class="wheel"></div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">AI Powered Community</h1>
+          <p class="hero-subtitle">
+            The revolutionary solution to economic inequality in the age of AI
+          </p>
+          <p class="hero-description">
+            Don't get left behind – join the community that's building a new
+            economy where everyone wins, not just the wealthy few.
+          </p>
+
+          <!-- Scroll Down Indicator -->
+          <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse">
+              <div class="wheel"></div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2 class="section-title">Home of The Flourishing Economy</h2>
-                <p class="section-subtitle">A blueprint for Human and AI collaborative prosperity – building an economy where everyone shares in the benefits</p>
-            </div>
-
-            <!-- Custom Video Player #1 -->
-            <div class="video-container animate-on-scroll">
-                <div class="apc-player" id="apcPlayer1">
-                    <div class="apc-seek-flash left"  id="flashLeft1"><i class="fas fa-backward"></i></div>
-                    <div class="apc-seek-flash right" id="flashRight1"><i class="fas fa-forward"></i></div>
-                    <div class="apc-spinner" id="apcSpinner1"><div class="apc-spinner-ring"></div></div>
-                    <video id="apcVideo1">
-                        <source src="./videos/video-one.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="apc-play-overlay" id="apcOverlay1">
-                        <div class="apc-big-play"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="apc-controls" id="apcControls1">
-                        <div class="apc-progress-wrap" id="apcSeek1">
-                            <div class="apc-progress-bg">
-                                <div class="apc-buffered" id="apcBuffered1"></div>
-                                <div class="apc-played"   id="apcPlayed1"></div>
-                            </div>
-                            <div class="apc-progress-thumb" id="apcThumb1"></div>
-                        </div>
-                        <div class="apc-bottom">
-                            <button class="apc-btn" id="apcPlayBtn1"><i class="fas fa-play" id="apcPlayIcon1"></i></button>
-                            <div class="apc-volume-group">
-                                <button class="apc-btn" id="apcMuteBtn1"><i class="fas fa-volume-high" id="apcVolIcon1"></i></button>
-                                <input type="range" class="apc-volume-slider" id="apcVol1" min="0" max="1" step="0.02" value="1">
-                            </div>
-                            <div class="apc-time"><span id="apcCur1">0:00</span> / <span id="apcDur1">0:00</span></div>
-                            <div class="apc-spacer"></div>
-                            <button class="apc-speed" id="apcSpeedBtn1">1×</button>
-                            <div class="apc-speed-menu" id="apcSpeedMenu1">
-                                <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
-                                <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
-                                <div class="apc-speed-opt active" data-speed="1">1×</div>
-                                <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
-                                <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
-                                <div class="apc-speed-opt" data-speed="2">2×</div>
-                            </div>
-                            <button class="apc-btn" id="apcFsBtn1"><i class="fas fa-expand" id="apcFsIcon1"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Home of The Flourishing Economy</h2>
+          <p class="section-subtitle">
+            A blueprint for Human and AI collaborative prosperity – building an
+            economy where everyone shares in the benefits
+          </p>
         </div>
+
+        <!-- Custom Video Player #1 -->
+        <div class="video-container animate-on-scroll">
+          <div class="apc-player" id="apcPlayer1">
+            <div class="apc-seek-flash left" id="flashLeft1">
+              <i class="fas fa-backward"></i>
+            </div>
+            <div class="apc-seek-flash right" id="flashRight1">
+              <i class="fas fa-forward"></i>
+            </div>
+            <div class="apc-spinner" id="apcSpinner1">
+              <div class="apc-spinner-ring"></div>
+            </div>
+            <video id="apcVideo1">
+              <source src="./videos/video-two.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="apc-play-overlay" id="apcOverlay1">
+              <div class="apc-big-play"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="apc-controls" id="apcControls1">
+              <div class="apc-progress-wrap" id="apcSeek1">
+                <div class="apc-progress-bg">
+                  <div class="apc-buffered" id="apcBuffered1"></div>
+                  <div class="apc-played" id="apcPlayed1"></div>
+                </div>
+                <div class="apc-progress-thumb" id="apcThumb1"></div>
+              </div>
+              <div class="apc-bottom">
+                <button class="apc-btn" id="apcPlayBtn1">
+                  <i class="fas fa-play" id="apcPlayIcon1"></i>
+                </button>
+                <div class="apc-volume-group">
+                  <button class="apc-btn" id="apcMuteBtn1">
+                    <i class="fas fa-volume-high" id="apcVolIcon1"></i>
+                  </button>
+                  <input
+                    type="range"
+                    class="apc-volume-slider"
+                    id="apcVol1"
+                    min="0"
+                    max="1"
+                    step="0.02"
+                    value="1"
+                  />
+                </div>
+                <div class="apc-time">
+                  <span id="apcCur1">0:00</span> /
+                  <span id="apcDur1">0:00</span>
+                </div>
+                <div class="apc-spacer"></div>
+                <button class="apc-speed" id="apcSpeedBtn1">1×</button>
+                <div class="apc-speed-menu" id="apcSpeedMenu1">
+                  <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
+                  <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
+                  <div class="apc-speed-opt active" data-speed="1">1×</div>
+                  <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
+                  <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
+                  <div class="apc-speed-opt" data-speed="2">2×</div>
+                </div>
+                <button class="apc-btn" id="apcFsBtn1">
+                  <i class="fas fa-expand" id="apcFsIcon1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Affiliates Program Section -->
     <section class="affiliates" id="affiliates">
-        <div class="container">
-            <div class="affiliates-header">
-                <h2 class="section-title">The Flourishing Affiliates Program</h2>
-            </div>
-
-            <div class="affiliates-content">
-                <div class="affiliates-benefits animate-on-scroll">
-                    <div class="benefit-card animate-on-scroll">
-                        <h3>Turnkey Marketing Program</h3>
-                        <p>The AI Powered Community, a non-profit corporation, provides every member of the Marketing Team a complete turnkey marketing program. The program is completely operated by your Robo, you just need to set up your Facebook account. Complete details are in the affiliate section.</p>
-                    </div>
-
-                    <div class="benefit-card animate-on-scroll">
-                        <h3>Team Support is Essential</h3>
-                        <p>It's very important for every Marketing Affiliate to support their team after they join your group. Create an email list and keep in contact with your members on a weekly basis. Keep them informed, they could be a very important part of any of your future ventures.</p>
-                    </div>
-
-                    <div class="benefit-card animate-on-scroll">
-                        <h3>Sustainable Maximum Income</h3>
-                        <p>The Flourishing Economy affiliate turnkey program has a maximum income cap of $4000 Monthly, after you reach the maximum, the program will be terminated. To reach the maximum income of $260,000 yearly you can continue the same program with the addition of products to your program.</p>
-                    </div>
-                </div>
-
-                <div class="cta-section animate-on-scroll">
-                    <h3>Experience the Power of AI Collaboration</h3>
-                    <p>Join thousands of members already benefiting from the Human Partnership with the AI Powered Economy</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="affiliates-header">
+          <h2 class="section-title">The Flourishing Affiliates Program</h2>
         </div>
+
+        <div class="affiliates-content">
+          <div class="affiliates-benefits animate-on-scroll">
+            <div class="benefit-card animate-on-scroll">
+              <h3>Turnkey Marketing Program</h3>
+              <p>
+                The AI Powered Community, a non-profit corporation, provides
+                every member of the Marketing Team a complete turnkey marketing
+                program. The program is completely operated by your Robo, you
+                just need to set up your Facebook account. Complete details are
+                in the affiliate section.
+              </p>
+            </div>
+
+            <div class="benefit-card animate-on-scroll">
+              <h3>Team Support is Essential</h3>
+              <p>
+                It's very important for every Marketing Affiliate to support
+                their team after they join your group. Create an email list and
+                keep in contact with your members on a weekly basis. Keep them
+                informed, they could be a very important part of any of your
+                future ventures.
+              </p>
+            </div>
+
+            <div class="benefit-card animate-on-scroll">
+              <h3>Sustainable Maximum Income</h3>
+              <p>
+                The Flourishing Economy affiliate turnkey program has a maximum
+                income cap of $4000 Monthly, after you reach the maximum, the
+                program will be terminated. To reach the maximum income of
+                $260,000 yearly you can continue the same program with the
+                addition of products to your program.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Custom Video Player -->
+      <div class="video-container padding-bottom-md animate-on-scroll">
+        <div class="apc-player" id="apcPlayer2">
+          <div class="apc-seek-flash left" id="flashLeft2">
+            <i class="fas fa-backward"></i>
+          </div>
+          <div class="apc-seek-flash right" id="flashRight2">
+            <i class="fas fa-forward"></i>
+          </div>
+          <div class="apc-spinner" id="apcSpinner2">
+            <div class="apc-spinner-ring"></div>
+          </div>
+          <video id="apcVideo2">
+            <source src="./videos/video-two.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="apc-play-overlay" id="apcOverlay2">
+            <div class="apc-big-play"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="apc-controls" id="apcControls2">
+            <div class="apc-progress-wrap" id="apcSeek2">
+              <div class="apc-progress-bg">
+                <div class="apc-buffered" id="apcBuffered2"></div>
+                <div class="apc-played" id="apcPlayed2"></div>
+              </div>
+              <div class="apc-progress-thumb" id="apcThumb2"></div>
+            </div>
+            <div class="apc-bottom">
+              <button class="apc-btn" id="apcPlayBtn2">
+                <i class="fas fa-play" id="apcPlayIcon2"></i>
+              </button>
+              <div class="apc-volume-group">
+                <button class="apc-btn" id="apcMuteBtn2">
+                  <i class="fas fa-volume-high" id="apcVolIcon2"></i>
+                </button>
+                <input
+                  type="range"
+                  class="apc-volume-slider"
+                  id="apcVol2"
+                  min="0"
+                  max="1"
+                  step="0.02"
+                  value="1"
+                />
+              </div>
+              <div class="apc-time">
+                <span id="apcCur2">0:00</span> / <span id="apcDur2">0:00</span>
+              </div>
+              <div class="apc-spacer"></div>
+              <button class="apc-speed" id="apcSpeedBtn2">1×</button>
+              <div class="apc-speed-menu" id="apcSpeedMenu2">
+                <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
+                <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
+                <div class="apc-speed-opt active" data-speed="1">1×</div>
+                <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
+                <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
+                <div class="apc-speed-opt" data-speed="2">2×</div>
+              </div>
+              <button class="apc-btn" id="apcFsBtn2">
+                <i class="fas fa-expand" id="apcFsIcon2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="padding-top-md padding-bottom-sm">
+        <div class="cta-section animate-on-scroll">
+          <h3>Experience the Power of AI Collaboration</h3>
+          <p>
+            Join thousands of members already benefiting from the Human
+            Partnership with the AI Powered Economy
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Video Section -->
     <section class="video-section" id="video">
-        <div class="container">
-            <!-- Custom Video Player -->
-            <div class="video-container animate-on-scroll">
-                <div class="apc-player" id="apcPlayer2">
-                    <div class="apc-seek-flash left"  id="flashLeft2"><i class="fas fa-backward"></i></div>
-                    <div class="apc-seek-flash right" id="flashRight2"><i class="fas fa-forward"></i></div>
-                    <div class="apc-spinner" id="apcSpinner2"><div class="apc-spinner-ring"></div></div>
-                    <video id="apcVideo2">
-                        <source src="./videos/video-two.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="apc-play-overlay" id="apcOverlay2">
-                        <div class="apc-big-play"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="apc-controls" id="apcControls2">
-                        <div class="apc-progress-wrap" id="apcSeek2">
-                            <div class="apc-progress-bg">
-                                <div class="apc-buffered" id="apcBuffered2"></div>
-                                <div class="apc-played"   id="apcPlayed2"></div>
-                            </div>
-                            <div class="apc-progress-thumb" id="apcThumb2"></div>
-                        </div>
-                        <div class="apc-bottom">
-                            <button class="apc-btn" id="apcPlayBtn2"><i class="fas fa-play" id="apcPlayIcon2"></i></button>
-                            <div class="apc-volume-group">
-                                <button class="apc-btn" id="apcMuteBtn2"><i class="fas fa-volume-high" id="apcVolIcon2"></i></button>
-                                <input type="range" class="apc-volume-slider" id="apcVol2" min="0" max="1" step="0.02" value="1">
-                            </div>
-                            <div class="apc-time"><span id="apcCur2">0:00</span> / <span id="apcDur2">0:00</span></div>
-                            <div class="apc-spacer"></div>
-                            <button class="apc-speed" id="apcSpeedBtn2">1×</button>
-                            <div class="apc-speed-menu" id="apcSpeedMenu2">
-                                <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
-                                <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
-                                <div class="apc-speed-opt active" data-speed="1">1×</div>
-                                <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
-                                <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
-                                <div class="apc-speed-opt" data-speed="2">2×</div>
-                            </div>
-                            <button class="apc-btn" id="apcFsBtn2"><i class="fas fa-expand" id="apcFsIcon2"></i></button>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- Custom Video Player -->
+        <div class="video-container animate-on-scroll">
+          <div class="apc-player" id="apcPlayer3">
+            <div class="apc-seek-flash left" id="flashLeft3">
+              <i class="fas fa-backward"></i>
             </div>
-        </div>
-    </section>
-
-    <!-- Bottom Sections -->
-    <section class="bottom-sections">
-        <div class="container">
-            <div class="bottom-card animate-on-scroll">
-                <div class="message-header">
-                    <div class="ceo-avatar">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="ceo-info">
-                        <h3>Victor Marchildon</h3>
-                        <p>CEO, AI Powered Community</p>
-                    </div>
-                </div>
-                <div class="message-content">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p>Thank you for joining our new community. I hope you enjoy your new life. Together, we're building something revolutionary – an economy that works for everyone, not just the privileged few. Welcome to the future of prosperity.</p>
-                    <p class="cta-link gradient-text">For Complete details click on the <strong>Visit Community</strong> button top of this page</p>
-                </div>
+            <div class="apc-seek-flash right" id="flashRight3">
+              <i class="fas fa-forward"></i>
             </div>
+            <div class="apc-spinner" id="apcSpinner3">
+              <div class="apc-spinner-ring"></div>
+            </div>
+            <video id="apcVideo3">
+              <source src="./videos/video-two.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="apc-play-overlay" id="apcOverlay3">
+              <div class="apc-big-play"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="apc-controls" id="apcControls3">
+              <div class="apc-progress-wrap" id="apcSeek3">
+                <div class="apc-progress-bg">
+                  <div class="apc-buffered" id="apcBuffered3"></div>
+                  <div class="apc-played" id="apcPlayed3"></div>
+                </div>
+                <div class="apc-progress-thumb" id="apcThumb3"></div>
+              </div>
+              <div class="apc-bottom">
+                <button class="apc-btn" id="apcPlayBtn3">
+                  <i class="fas fa-play" id="apcPlayIcon3"></i>
+                </button>
+                <div class="apc-volume-group">
+                  <button class="apc-btn" id="apcMuteBtn3">
+                    <i class="fas fa-volume-high" id="apcVolIcon3"></i>
+                  </button>
+                  <input
+                    type="range"
+                    class="apc-volume-slider"
+                    id="apcVol3"
+                    min="0"
+                    max="1"
+                    step="0.02"
+                    value="1"
+                  />
+                </div>
+                <div class="apc-time">
+                  <span id="apcCur3">0:00</span> /
+                  <span id="apcDur3">0:00</span>
+                </div>
+                <div class="apc-spacer"></div>
+                <button class="apc-speed" id="apcSpeedBtn3">1×</button>
+                <div class="apc-speed-menu" id="apcSpeedMenu3">
+                  <div class="apc-speed-opt" data-speed="0.5">0.5×</div>
+                  <div class="apc-speed-opt" data-speed="0.75">0.75×</div>
+                  <div class="apc-speed-opt active" data-speed="1">1×</div>
+                  <div class="apc-speed-opt" data-speed="1.25">1.25×</div>
+                  <div class="apc-speed-opt" data-speed="1.5">1.5×</div>
+                  <div class="apc-speed-opt" data-speed="2">2×</div>
+                </div>
+                <button class="apc-btn" id="apcFsBtn3">
+                  <i class="fas fa-expand" id="apcFsIcon3"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 AI Powered Community. All rights reserved. Building The Flourishing Economy.</p>
-            </div>
+    <footer class="footer margin-top-md">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 AI Powered Community. All rights reserved. Building The
+            Flourishing Economy.
+          </p>
         </div>
+      </div>
     </footer>
 
-    <script src="script.js?v=6"></script>
-</body>
+    <script src="script.js?v=7"></script>
+  </body>
 </html>
