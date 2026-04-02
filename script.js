@@ -50,30 +50,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// SCROLL ANIMATIONS
+// ENHANCED SCROLL ANIMATIONS
 // ============================================
 
-// Add animate-on-scroll class to elements
-document.addEventListener('DOMContentLoaded', () => {
-    // Add animation classes to sections
-    const sections = document.querySelectorAll('.section-header, .video-container, .affiliates-benefits, .cta-section, .bottom-card');
-    sections.forEach((section, index) => {
-        section.classList.add('animate-on-scroll');
-        section.style.transitionDelay = `${index * 0.1}s`;
-    });
-    
-    // Add animation to benefit cards with staggered delays
-    const benefitCards = document.querySelectorAll('.benefit-card');
-    benefitCards.forEach((card, index) => {
-        card.classList.add('animate-on-scroll');
-        card.style.transitionDelay = `${0.1 + index * 0.15}s`;
-    });
-});
-
-// Scroll animation observer
+// Scroll animation observer with enhanced options
 const observerOptions = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '0px 0px -50px 0px',
     threshold: 0.1
 };
 
@@ -81,33 +64,48 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animated');
+            
+            // Special handling for benefits box to trigger list animations
+            if (entry.target.classList.contains('benefits-box')) {
+                entry.target.classList.add('animated');
+            }
+            
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all animate-on-scroll elements
+// Initialize animations on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-    }, 100);
+    // Observe all elements with animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Add animation classes to elements that need them
+    const videoContainers = document.querySelectorAll('.video-container:not(.animate-on-scroll)');
+    videoContainers.forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
 });
 
-// Add floating particles to hero
+// Add enhanced particles to hero
+let particlesInitialized = false;
+
 document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
-    if (hero) {
+    if (hero && !particlesInitialized) {
+        particlesInitialized = true;
         const particlesContainer = document.createElement('div');
         particlesContainer.className = 'hero-particles';
         
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 15; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = `${Math.random() * 100}%`;
             particle.style.animationDelay = `${Math.random() * 5}s`;
-            particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+            particle.style.animationDuration = `${8 + Math.random() * 12}s`;
             particlesContainer.appendChild(particle);
         }
         
@@ -115,15 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Smooth reveal animation on page load
+// Add js-loaded class for smoother animation handling
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    document.body.classList.add('js-loaded');
 });
+
+// Also add it immediately if already loaded
+if (document.readyState === 'complete') {
+    document.body.classList.add('js-loaded');
+}
 
 // Parallax effect on scroll (subtle)
 window.addEventListener('scroll', () => {

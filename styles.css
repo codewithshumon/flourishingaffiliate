@@ -2356,3 +2356,374 @@ section {
         font-size: 1rem;
     }
 }
+
+/* ============================================
+   ENHANCED ANIMATIONS - ADDED BELOW
+   ============================================ */
+
+/* Smooth Hero Entrance Animations - Slower and more delay */
+.hero-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: opacity, transform;
+}
+
+.hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+    will-change: opacity, transform;
+}
+
+.hero-description {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s forwards;
+    will-change: opacity, transform;
+}
+
+.scroll-indicator {
+    opacity: 0;
+    animation: heroFadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s forwards;
+    will-change: opacity, transform;
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scroll Animations - Start visible, animate when ready */
+.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .animate-on-scroll:not(.animated) {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide In from Left */
+.animate-left {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .animate-left:not(.animated) {
+    opacity: 0;
+    transform: translateX(-35px);
+}
+
+.animate-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide In from Right */
+.animate-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .animate-right:not(.animated) {
+    opacity: 0;
+    transform: translateX(35px);
+}
+
+.animate-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale In Animation */
+.animate-scale {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .animate-scale:not(.animated) {
+    opacity: 0;
+    transform: scale(0.97);
+}
+
+.animate-scale.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Enhanced Button Hover Animations */
+.btn-cta-red {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta-red::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-cta-red:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-cta-red:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(192, 0, 0, 0.5);
+}
+
+.btn-cta-red:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Pulse Animation for CTA Button */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(192, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(192, 0, 0, 0.7), 0 0 20px rgba(192, 0, 0, 0.3);
+    }
+}
+
+.cta-button-wrapper .btn-cta-red {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.cta-button-wrapper .btn-cta-red:hover {
+    animation: none;
+}
+
+/* Benefit Card Hover Effects */
+.benefit-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.benefit-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Container Enhancements */
+.video-container.animate-on-scroll.animated {
+    animation: videoPulse 0.6s ease;
+}
+
+@keyframes videoPulse {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+/* Logo Animation */
+.nav-brand:hover .logo-icon {
+    animation: logoWiggle 0.5s ease;
+}
+
+@keyframes logoWiggle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); }
+    75% { transform: rotate(10deg) scale(1.1); }
+}
+
+/* Section Title Shimmer Animation */
+.section-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Smooth Benefits Box Animation */
+.benefits-box {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .benefits-box:not(.animated) {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.benefits-box.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Benefits List Item Animations */
+.benefits-list li {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.js-loaded .benefits-box:not(.animated) .benefits-list li {
+    opacity: 0;
+    transform: translateX(-15px);
+}
+
+.benefits-box.animated .benefits-list li:nth-child(1) { transition-delay: 0.1s; }
+.benefits-box.animated .benefits-list li:nth-child(2) { transition-delay: 0.2s; }
+.benefits-box.animated .benefits-list li:nth-child(3) { transition-delay: 0.3s; }
+.benefits-box.animated .benefits-list li:nth-child(4) { transition-delay: 0.4s; }
+.benefits-box.animated .benefits-list li:nth-child(5) { transition-delay: 0.5s; }
+
+/* Smooth Checkmark Animation */
+.benefits-list li i {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.js-loaded .benefits-box:not(.animated) .benefits-list li i {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5);
+}
+
+.benefits-box.animated .benefits-list li:nth-child(1) i { transition-delay: 0.2s; }
+.benefits-box.animated .benefits-list li:nth-child(2) i { transition-delay: 0.3s; }
+.benefits-box.animated .benefits-list li:nth-child(3) i { transition-delay: 0.4s; }
+.benefits-box.animated .benefits-list li:nth-child(4) i { transition-delay: 0.5s; }
+.benefits-box.animated .benefits-list li:nth-child(5) i { transition-delay: 0.6s; }
+
+/* Staggered Benefit Cards Animation */
+.benefit-card.animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+.benefit-card.animate-on-scroll:nth-child(2) { transition-delay: 0.15s; }
+.benefit-card.animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+
+/* CTA Section Animation */
+.cta-section.animate-on-scroll {
+    transition: all 0.8s ease;
+}
+
+/* Footer - Always visible */
+.footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Nav Link Hover Effect */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--bright-red);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Big Play Button Pulse */
+.apc-big-play {
+    animation: playPulse 2s ease-in-out infinite;
+}
+
+@keyframes playPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.apc-player:hover .apc-big-play {
+    animation: none;
+    transform: scale(1.1);
+}
+
+/* Scroll Indicator Bounce */
+.scroll-indicator .mouse {
+    animation: mouseBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes mouseBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile Animation Adjustments */
+@media (max-width: 768px) {
+    .animate-on-scroll,
+    .animate-left,
+    .animate-right,
+    .animate-scale {
+        transition-duration: 0.4s;
+    }
+    
+    .hero-title,
+    .hero-subtitle,
+    .hero-description {
+        animation-duration: 0.5s;
+    }
+}
