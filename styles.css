@@ -1395,6 +1395,7 @@ section {
     z-index: 1;
 }
 
+
 .cta-section p {
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.15rem;
@@ -1402,6 +1403,32 @@ section {
     font-weight: 500;
     position: relative;
     z-index: 1;
+}
+
+.cta-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-list li {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.cta-list li::before {
+    content: "•";
+    color: var(--bright-red);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
 }
 
 /* Video Section Enhanced */
@@ -1536,8 +1563,20 @@ section {
 }
 
 
+.padding-x-max {
+    padding: 0 200px;
+}
+
 .padding-top-md {
     padding-top: 100px;
+}
+
+.padding-top-sm {
+    padding-top: 50px;
+}
+
+.padding-top-xs {
+    padding-top: 30px;
 }
 
 .padding-bottom-sm {
@@ -1548,6 +1587,23 @@ section {
 .margin-top-md {
     margin-top: 100px;
 }
+
+.center-note-text {
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+}
+
+.center-bold-text {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
 /* Responsive Enhancements */
 @media (max-width: 768px) {
     .hero {
@@ -2175,5 +2231,128 @@ section {
     
     .scroll-indicator {
         margin-top: 30px;
+    }
+}
+
+/* ============================================
+   BENEFITS BOX & CTA BUTTON STYLES
+   ============================================ */
+
+/* Benefits Box - Black container with list */
+.benefits-box {
+    background: #000000;
+    padding: 50px 60px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefits-box h4 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.benefits-list li {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    font-weight: 600;
+}
+
+.benefits-list li i {
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+}
+
+/* CTA Button Wrapper */
+.cta-button-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Red CTA Button */
+.btn-cta-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #c00000;
+    color: #ffffff;
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(192, 0, 0, 0.4);
+}
+
+.btn-cta-red:hover {
+    background: #a00000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(192, 0, 0, 0.5);
+}
+
+/* Responsive adjustments for benefits box */
+@media (max-width: 768px) {
+    .benefits-box {
+        padding: 35px 25px;
+        border-radius: 16px;
+    }
+    
+    .benefits-box h4 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .benefits-list li {
+        font-size: 1rem;
+        padding: 10px 0;
+        padding-left: 25px;
+    }
+    
+    .btn-cta-red {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-box {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+    
+    .benefits-box h4 {
+        font-size: 1.25rem;
+    }
+    
+    .benefits-list li {
+        font-size: 0.9rem;
+        padding-left: 22px;
+    }
+    
+    .btn-cta-red {
+        padding: 12px 28px;
+        font-size: 1rem;
     }
 }
